@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="lab1.css">
+	<script src="lab1.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js">
+		d3.select("body").style("background-color","#FFFFCC");
+	</script>
+
+
+</head>
+<body>
+		I love Dr. Hsiao!	
+		<FORM NAME="myForm">
+<INPUT TYPE="button" id="clickButton1" VALUE="thiS is a button!"
+onClick="processClick();">
+</FORM>
+<svg >
+<line x1="50" y1="50" x2="100" y2="100" stroke-width="10" stroke="red" />	
+<line x1="100" y1="100" x2="200" y2="0" stroke-width="10" stroke="black" />
+</svg>
+<div id="viz"></div>
+<script type="text/javascript">
+var svgArea = d3.select("#viz")
+.append("svg")
+.attr("width", 200)
+.attr("height", 200);
+svgArea.append("circle")
+.style("stroke", "yellow")
+.style("fill", "white")
+.style("fill-opacity","0.2")
+.attr("r", 40)
+.attr("cx", 50)
+.attr("cy", 50)
+.on("mouseover", function(){return tooltip.style("visibility", "visible");} )
+.on("mouseout", function(){return tooltip.style("visibility", "hidden");}) ;
+
+var tooltip = d3.select("body")
+.append("div")
+.style("position", "relative")
+.style("visibility", "hidden")
+.text("I drew something");
+</script>
+</body>
+</html>
