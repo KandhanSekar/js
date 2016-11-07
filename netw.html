@@ -13,7 +13,7 @@
 }
 
 </style>
-<div>
+<div width="100%">
 <input
     type="range"
     min="10"                    // default 0
@@ -21,27 +21,16 @@
     step="10"                   // default 1
     value="300"                 // default min + (max-min)/2
     data-orientation="vertical" // default horizontal
+    style="width:70%"
 >
-<script >
-
-  $('input[type="range"]').rangeslider({
-    polyfill:true,
-    onSlide: function(position, value) {
-
-link="file:///C:/Users/kandh/OneDrive/Documents/GitHub/js/k2.json";
-    d3.json(link, function(error, graph)
-    },
-  });
-  
-</script>
 </div>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="rangeslider.min.js"></script>
-<svg width="960" height="600"></svg>
+<svg width="960" height="800"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 
 <script>
-  
+
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
